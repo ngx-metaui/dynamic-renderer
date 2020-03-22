@@ -23,7 +23,10 @@
               "libs/core/tsconfig.lib.json",
               "libs/core/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/core/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core/**"
+            ]
           }
         },
         "test": {
@@ -53,8 +56,14 @@
             "polyfills": "apps/my-app/src/polyfills.ts",
             "tsConfig": "apps/my-app/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/my-app/src/favicon.ico", "apps/my-app/src/assets"],
-            "styles": ["apps/my-app/src/styles.css"],
+            "assets": [
+              "apps/my-app/src/favicon.ico",
+              "apps/my-app/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/my-app/src/styles.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -112,7 +121,10 @@
               "apps/my-app/tsconfig.app.json",
               "apps/my-app/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/my-app/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/my-app/**"
+            ]
           }
         },
         "test": {
@@ -126,6 +138,43 @@
         }
       }
     },
+    "ui-lib": {
+      "projectType": "library",
+      "root": "libs/ui-lib",
+      "sourceRoot": "libs/ui-lib/src",
+      "prefix": "dynamic-renderer",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ui-lib/tsconfig.lib.json",
+            "project": "libs/ui-lib/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/ui-lib/tsconfig.lib.json",
+              "libs/ui-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-lib/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/ui-lib/src/test.ts",
+            "tsConfig": "libs/ui-lib/tsconfig.spec.json",
+            "karmaConfig": "libs/ui-lib/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {}
+    }
   },
   "defaultProject": "my-app",
   "cli": {

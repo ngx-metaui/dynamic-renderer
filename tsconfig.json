@@ -11,15 +11,10 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "target": "es2015",
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "paths": {
-      "@dynamic-renderer/core": [
-        "dist/libs/core",
-        "libs/core/src/index.ts"
-      ]
+      "@dynamic-renderer/core": ["dist/libs/core", "libs/core/src/index.ts"],
+      "@dynamic-renderer/ui-lib": ["libs/ui-lib/src/index.ts"]
     },
     "rootDir": "."
   },
