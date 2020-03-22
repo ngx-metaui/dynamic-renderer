@@ -8,10 +8,10 @@
     "nx.json": "*"
   },
   "projects": {
-    "dynamic-renderer": {
+    "core": {
       "tags": []
     },
-    "dynamic-renderer-e2e": {
+    "my-app": {
       "tags": []
     }
   }

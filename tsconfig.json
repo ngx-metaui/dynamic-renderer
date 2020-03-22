@@ -15,7 +15,12 @@
       "es2018",
       "dom"
     ],
-    "paths": {},
+    "paths": {
+      "@dynamic-renderer/core": [
+        "dist/libs/core",
+        "libs/core/src/index.ts"
+      ]
+    },
     "rootDir": "."
   },
   "angularCompilerOptions": {
