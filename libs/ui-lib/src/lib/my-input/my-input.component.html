@@ -1,0 +1,19 @@
+<input
+  #inputField
+  matInput
+  class="mat-input-element mat-form-field-autofill-control"
+  [attr.id]="'asdf'"
+  [type]="'text'"
+  [placeholder]="placeholder"
+  [required]="required"
+  [readonly]="readonly"
+  [disabled]="disabled"
+  [(ngModel)]="value"
+  (blur)="_focusChanged(false)"
+  (focus)="_focusChanged(true)"
+  (input)="onInput(inputField.value)"
+  (compositionstart)="_compositionStart()"
+  (compositionend)="_compositionEnd($event.target.value)"
+/>
+
+
