@@ -1,0 +1,18 @@
+{
+  "npmScope": "dynamic-renderer",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "dynamic-renderer": {
+      "tags": []
+    },
+    "dynamic-renderer-e2e": {
+      "tags": []
+    }
+  }
+}
